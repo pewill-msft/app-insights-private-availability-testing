@@ -4,7 +4,7 @@
 
 Demo function app illustrating how to perform availability tests within a private network
 
-Conceptual architecture
+The following image illustrates the high-level architecture.
 ![High level architecture](./docs/img/high-level-architecture.png)
 
 An **Azure App Service** is connected to a Virtual Network using private link. A **Function App** is injected into the Virtual Network and has line of sight to the App Service. The Function App is configured to perform availability tests against the App Service and reports status to **Application Insights** using the `TrackAvailability()` method.
